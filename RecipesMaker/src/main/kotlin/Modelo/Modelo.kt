@@ -1,13 +1,14 @@
 package Modelo
 
 class Modelo {
-    var recetas = "guardadas: "
-    val menu = """
+    private var recetas = "guardadas: "
+    private val menu = """
         Selecciona la opción deseada:
         1. Hacer una receta.
         2. Ver mis recetas.
         3. Salir.
     """.trimIndent()
+
 
     constructor(){
 
@@ -23,12 +24,12 @@ class Modelo {
         }
     }
 
-    fun verRecetas(){
+    private fun verRecetas(){
         println(recetas)
         ejecutarPrograma()
     }
 
-    fun hacerReceta() {
+    private fun hacerReceta() {
         recetas+="\n{Ingredientes"
         val menu = """
             Seleccione los ingredientes:
